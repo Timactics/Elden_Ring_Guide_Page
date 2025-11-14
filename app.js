@@ -17,6 +17,6 @@ document.getElementById("enter-btn").onclick = () => {
     frontpage.style.animation = "fadeOut 0.8s forwards";
     setTimeout(() => {
         frontpage.style.display = "none";
-        header.style.display = "flex";
+        header.style.display = "flex";   // Header (Logo + Burger) einblenden
     }, 800);
 };
