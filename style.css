@@ -9,23 +9,21 @@ body {
     color: #eee;
     overflow-x: hidden;
 
-    /* Elden Ring Hintergrund */
     background:
         radial-gradient(circle at top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.9)),
-        url("img/eldenring_backround.jpg") center center / cover fixed no-repeat;
+        url("img/eldenring_bg.jpg") center center / cover fixed no-repeat;
 }
 
 /* FRONT PAGE */
 #frontpage {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7); /* leicht durchsichtig, BG schimmert durch */
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    animation: fadeIn 0.8s ease;
 }
 
 #front-logo {
@@ -44,7 +42,6 @@ body {
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.2s;
 }
 
 #enter-btn:hover {
@@ -55,46 +52,39 @@ body {
     to { opacity: 0; visibility: hidden; }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* APP-WRAPPER – SCHIEBT SICH BEIM MENÜ-AUF ZUR SEITE */
+/* SLIDE-SEITE */
 #app {
     min-height: 100vh;
     transition: transform 0.35s ease;
 }
 
-/* wenn Menü offen ist, verschiebe die ganze Seite nach rechts */
 body.menu-open #app {
     transform: translateX(260px);
 }
 
+/* HEADER */
 #header {
     position: sticky;
     top: 0;
     z-index: 3000;
 
+    height: 50px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 50px; /* ← NEU */
-
     background: rgba(19, 19, 27, 0.92);
-    padding: 12px 15px;
     border-bottom: 1px solid #2d2d38;
 }
 
-/* ZENTRIERTER TEXT */
 #headerTitle {
     font-size: 20px;
     font-weight: bold;
     color: #e4c37a;
 }
 
-/* BURGER BUTTON OBEN RECHTS */
+/* BURGER BUTTON */
 .burger {
     position: absolute;
     top: 50%;
@@ -109,7 +99,7 @@ body.menu-open #app {
     z-index: 4000;
 }
 
-/* SIDE MENU – FEST LINKS, SEITE FÄHRT DAVON WEG */
+/* SIDE MENU */
 #sideMenu {
     position: fixed;
     top: 0;
@@ -124,20 +114,12 @@ body.menu-open #app {
 
     z-index: 2500;
 
-    /* Menü selbst fährt auch rein/raus */
     transform: translateX(-100%);
     transition: transform 0.35s ease;
 }
 
-/* wenn offen */
 body.menu-open #sideMenu {
     transform: translateX(0);
-}
-
-/* MENÜSTRUKTUR */
-#sideMenu h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
 }
 
 .menu-header {
@@ -156,7 +138,6 @@ body.menu-open #sideMenu {
 .submenu {
     list-style: none;
     padding-left: 15px;
-    margin: 0;
     display: none;
 }
 
@@ -171,7 +152,6 @@ body.menu-open #sideMenu {
     padding: 20px;
 }
 
-/* Karten / Einträge */
 .content-card {
     background: rgba(22, 22, 32, 0.95);
     padding: 15px;
@@ -185,4 +165,25 @@ body.menu-open #sideMenu {
     width: 100%;
     border-radius: 6px;
     margin-top: 10px;
+}
+
+/* NEXT / PREVIOUS BUTTONS */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    background: #d4a64f;
+    color: black;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    background: #f7d788;
 }
