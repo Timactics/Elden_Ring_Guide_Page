@@ -1,4 +1,8 @@
 /* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -15,13 +19,13 @@ body {
 #frontpage {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7); /* leicht transparent über dem BG */
+    background: rgba(0, 0, 0, 0.7); /* leicht durchsichtig, BG schimmert durch */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9000;
-    animation: fadeIn 1s ease;
+    z-index: 9999;
+    animation: fadeIn 0.8s ease;
 }
 
 #front-logo {
@@ -56,47 +60,58 @@ body {
     to { opacity: 1; }
 }
 
+/* APP-WRAPPER – SCHIEBT SICH BEIM MENÜ-AUF ZUR SEITE */
+#app {
+    min-height: 100vh;
+    transition: transform 0.35s ease;
+}
+
+/* wenn Menü offen ist, verschiebe die ganze Seite nach rechts */
+body.menu-open #app {
+    transform: translateX(260px);
+}
+
 /* HEADER */
 #header {
     position: sticky;
     top: 0;
-    z-index: 6000;
+    z-index: 3000;
 
-    display: none;              /* wird nach Frontpage eingeschaltet */
+    display: flex;
+    justify-content: center;      /* Titel zentriert */
     align-items: center;
-    justify-content: flex-start;
 
     background: rgba(19, 19, 27, 0.92);
     padding: 12px 15px;
     border-bottom: 1px solid #2d2d38;
 }
 
-.logo {
+/* ZENTRIERTER TEXT */
+#headerTitle {
     font-size: 20px;
     font-weight: bold;
     color: #e4c37a;
 }
 
-/* BURGER – immer oben rechts im Header */
+/* BURGER BUTTON OBEN RECHTS */
 .burger {
     position: absolute;
+    top: 12px;
     right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
 
     background: none;
     border: none;
     color: white;
     font-size: 28px;
     cursor: pointer;
-    z-index: 8000; /* über dem Menü */
+    z-index: 4000;
 }
 
-/* SIDE MENU – sauber komplett ein-/ausfahrbar links */
+/* SIDE MENU – FEST LINKS, SEITE FÄHRT DAVON WEG */
 #sideMenu {
     position: fixed;
     top: 0;
-    left: -280px;             /* etwas mehr als Breite → nichts ragt raus */
+    left: 0;
     width: 260px;
     height: 100vh;
 
@@ -105,15 +120,24 @@ body {
     border-right: 1px solid #333;
     overflow-y: auto;
 
-    z-index: 5000;
-    transition: left 0.3s ease;
+    z-index: 2500;
+
+    /* Menü selbst fährt auch rein/raus */
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
 }
 
-#sideMenu.open {
-    left: 0;
+/* wenn offen */
+body.menu-open #sideMenu {
+    transform: translateX(0);
 }
 
 /* MENÜSTRUKTUR */
+#sideMenu h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 .menu-header {
     width: 100%;
     background: #1b1b26;
@@ -130,6 +154,7 @@ body {
 .submenu {
     list-style: none;
     padding-left: 15px;
+    margin: 0;
     display: none;
 }
 
