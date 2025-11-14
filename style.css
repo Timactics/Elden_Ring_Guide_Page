@@ -1,20 +1,65 @@
+/* GLOBAL */
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: #0b0b0f;
     color: #eee;
+    overflow-x: hidden;
+}
+
+/* FRONT PAGE */
+#frontpage {
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    animation: fadeIn 1s ease;
+}
+
+#front-logo {
+    width: 300px;
+    max-width: 80%;
+    filter: drop-shadow(0 0 25px #d4a64f);
+    margin-bottom: 40px;
+}
+
+#enter-btn {
+    background: #d4a64f;
+    color: black;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#enter-btn:hover {
+    background: #f7d788;
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#header {
+    position: sticky;
+    top: 0;
     background: #13131b;
     padding: 12px 15px;
     border-bottom: 1px solid #2d2d38;
-    position: sticky;
-    top: 0;
+    display: none; /* wird aktiviert nach FrontPage */
     z-index: 1000;
 }
 
@@ -24,7 +69,6 @@ header {
     color: #e4c37a;
 }
 
-/* BURGER */
 .burger {
     background: none;
     border: none;
@@ -33,24 +77,28 @@ header {
     cursor: pointer;
 }
 
-/* SIDEMENU */
+/* SIDE MENU FIX */
 #sideMenu {
     position: fixed;
     top: 0;
-    left: -260px;
+    left: 0;
+    bottom: 0;
     width: 260px;
-    height: 100%;
     background: #111118;
     padding: 20px;
-    transition: left 0.3s ease;
     border-right: 1px solid #333;
     overflow-y: auto;
+    z-index: 9999;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
 }
 
 #sideMenu.open {
-    left: 0;
+    transform: translateX(0);
 }
 
+/* MENU STRUCTURE */
 .menu-header {
     width: 100%;
     background: #1b1b26;
