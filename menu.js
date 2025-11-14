@@ -1,18 +1,33 @@
-// BURGER MENU
+// ELEMENTE
 const toggle = document.getElementById("menuToggle");
 const sideMenu = document.getElementById("sideMenu");
 
+// BURGER → BODY-KLASSE UMSCHALTEN
 toggle.onclick = () => {
-    sideMenu.classList.toggle("open");
+    document.body.classList.toggle("menu-open");
 };
 
-// SUBMENÜ LADEN
+// SUBMENÜS & EXTERNE LINKS
 document.querySelectorAll(".menu-header").forEach(header => {
+    const submenu = header.nextElementSibling;
+    const url = header.dataset.url;
+
+    // FALL 1: Externer Link (Mapgenie)
+    if (url) {
+        header.addEventListener("click", () => {
+            window.open(url, "_blank", "noopener,noreferrer");
+            document.body.classList.remove("menu-open"); // Menü wieder schließen
+        });
+        return;
+    }
+
+    // FALL 2: Normales Submenü mit JSON-Daten
+    if (!submenu || !submenu.classList.contains("submenu")) return;
+
     header.addEventListener("click", async () => {
-        const submenu = header.nextElementSibling;
         const src = submenu.dataset.source;
 
-        // auf/zu klappen
+        // auf / zu
         submenu.style.display =
             submenu.style.display === "block" ? "none" : "block";
 
@@ -27,7 +42,7 @@ document.querySelectorAll(".menu-header").forEach(header => {
             li.textContent = item.title;
             li.onclick = () => {
                 loadContent(item);
-                sideMenu.classList.remove("open"); // Menü wieder zuklappen
+                document.body.classList.remove("menu-open");
             };
             submenu.appendChild(li);
         });
