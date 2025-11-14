@@ -71,15 +71,16 @@ body.menu-open #app {
     transform: translateX(260px);
 }
 
-/* HEADER */
 #header {
     position: sticky;
     top: 0;
     z-index: 3000;
 
     display: flex;
-    justify-content: center;      /* Titel zentriert */
+    justify-content: center;
     align-items: center;
+
+    height: 50px; /* ← NEU */
 
     background: rgba(19, 19, 27, 0.92);
     padding: 12px 15px;
@@ -96,8 +97,9 @@ body.menu-open #app {
 /* BURGER BUTTON OBEN RECHTS */
 .burger {
     position: absolute;
-    top: 12px;
+    top: 50%;
     right: 15px;
+    transform: translateY(-50%);
 
     background: none;
     border: none;
