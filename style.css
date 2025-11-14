@@ -2,16 +2,21 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #0b0b0f;
     color: #eee;
     overflow-x: hidden;
+
+    /* Elden Ring Hintergrund */
+    background:
+        radial-gradient(circle at top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.9)),
+        url("img/eldenring_backround.jpg") center center / cover fixed no-repeat;
 }
 
 /* FRONT PAGE */
 #frontpage {
     position: fixed;
     inset: 0;
-    background: black;
+    /* halbtransparent, damit man den Hintergrund durchscheinen sieht */
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,10 +61,10 @@ body {
 #header {
     position: sticky;
     top: 0;
-    background: #13131b;
+    background: rgba(19, 19, 27, 0.92);
     padding: 12px 15px;
     border-bottom: 1px solid #2d2d38;
-    display: none; /* wird aktiviert nach FrontPage */
+    display: none; /* wird nach Frontpage eingeblendet */
     z-index: 1000;
 }
 
@@ -77,14 +82,14 @@ body {
     cursor: pointer;
 }
 
-/* SIDE MENU FIX */
+/* SIDE MENU – komplett rausgeschoben, keine Leiste sichtbar */
 #sideMenu {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 260px;
-    background: #111118;
+    background: rgba(17, 17, 24, 0.96);
     padding: 20px;
     border-right: 1px solid #333;
     overflow-y: auto;
@@ -98,7 +103,7 @@ body {
     transform: translateX(0);
 }
 
-/* MENU STRUCTURE */
+/* MENÜSTRUKTUR */
 .menu-header {
     width: 100%;
     background: #1b1b26;
@@ -129,12 +134,14 @@ body {
     padding: 20px;
 }
 
+/* Karten / Einträge */
 .content-card {
-    background: #161620;
+    background: rgba(22, 22, 32, 0.95);
     padding: 15px;
     border-radius: 10px;
     border: 1px solid #2d2d38;
     margin-bottom: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
 }
 
 .content-card img {
