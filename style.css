@@ -8,20 +8,19 @@ body {
     /* Elden Ring Hintergrund */
     background:
         radial-gradient(circle at top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.9)),
-        url("img/eldenring_backround.jpg") center center / cover fixed no-repeat;
+        url("img/eldenring_bg.jpg") center center / cover fixed no-repeat;
 }
 
 /* FRONT PAGE */
 #frontpage {
     position: fixed;
     inset: 0;
-    /* halbtransparent, damit man den Hintergrund durchscheinen sieht */
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7); /* leicht transparent über dem BG */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
+    z-index: 9000;
     animation: fadeIn 1s ease;
 }
 
@@ -61,11 +60,15 @@ body {
 #header {
     position: sticky;
     top: 0;
+    z-index: 6000;
+
+    display: none;              /* wird nach Frontpage eingeschaltet */
+    align-items: center;
+    justify-content: flex-start;
+
     background: rgba(19, 19, 27, 0.92);
     padding: 12px 15px;
     border-bottom: 1px solid #2d2d38;
-    display: none; /* wird nach Frontpage eingeblendet */
-    z-index: 1000;
 }
 
 .logo {
@@ -74,41 +77,41 @@ body {
     color: #e4c37a;
 }
 
+/* BURGER – immer oben rechts im Header */
 .burger {
-    margin-left:auto;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
     background: none;
     border: none;
     color: white;
-    font-size: 26px;
+    font-size: 28px;
     cursor: pointer;
+    z-index: 8000; /* über dem Menü */
 }
 
-/* SIDE MENU – komplett rausgeschoben, keine Leiste sichtbar */
+/* SIDE MENU – sauber komplett ein-/ausfahrbar links */
 #sideMenu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -280px;             /* etwas mehr als Breite → nichts ragt raus */
     width: 260px;
     height: 100vh;
 
     background: rgba(17, 17, 24, 0.96);
     padding: 20px;
-
     border-right: 1px solid #333;
     overflow-y: auto;
 
-    z-index: 2000;
-
-    /* vollständig außerhalb des Screens */
-    transform: translateX(-260px);
-    transition: transform 0.35s ease;
+    z-index: 5000;
+    transition: left 0.3s ease;
 }
 
-/* geöffnetes Menü */
 #sideMenu.open {
-    transform: translateX(0);
+    left: 0;
 }
-
 
 /* MENÜSTRUKTUR */
 .menu-header {
