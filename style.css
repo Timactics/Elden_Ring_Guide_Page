@@ -8,7 +8,7 @@ body {
     /* Elden Ring Hintergrund */
     background:
         radial-gradient(circle at top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.9)),
-        url("img/eldenring_bg.jpg") center center / cover fixed no-repeat;
+        url("img/eldenring_backround.jpg") center center / cover fixed no-repeat;
 }
 
 /* FRONT PAGE */
