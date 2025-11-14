@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "title": "Schmiedestein-Bergmannsglocke [1]",
+      "description": "Drop vom Crystalian (Ringklinge). Schaltet Schmiedestein [1] & [2] frei.",
+      "image": "img/smith1.jpg"
+    },
+    {
+      "title": "Schmiedestein-Bergmannsglocke [2]",
+      "description": "Gefunden im Versiegelten Tunnel. Schaltet Schmiedestein [3] & [4] frei.",
+      "image": "img/smith2.jpg"
+    },
+    {
+      "title": "Schmiedestein-Bergmannsglocke [3]",
+      "description": "In einer Truhe in den Zamor-Ruinen. Schaltet Schmiedestein [5] & [6] frei.",
+      "image": "img/smith3.jpg"
+    },
+    {
+      "title": "Schmiedestein-Bergmannsglocke [4]",
+      "description": "Drop vom Godskin Duo. Schaltet Schmiedestein [7] & [8] frei.",
+      "image": "img/smith4.jpg"
+    }
+  ]
+}
