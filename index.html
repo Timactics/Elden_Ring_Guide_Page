@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Elden Ring – Klangperlen Guide</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Elden Ring Guide</div>
+
+    <!-- BURGER -->
+    <button id="menuToggle" class="burger">☰</button>
+
+    <!-- MENÜ -->
+    <nav id="sideMenu">
+        <h3>Kategorien</h3>
+
+        <ul class="menu">
+
+            <li class="menu-item">
+                <button class="menu-header">Klangperlen – Schmiedesteine</button>
+                <ul class="submenu" data-source="data/smithing.json"></ul>
+            </li>
+
+            <li class="menu-item">
+                <button class="menu-header">Klangperlen – Dunkelschmiedesteine</button>
+                <ul class="submenu" data-source="data/somber.json"></ul>
+            </li>
+
+            <li class="menu-item">
+                <button class="menu-header">Main Bosse (bald verfügbar)</button>
+                <ul class="submenu" data-source="data/bosses.json"></ul>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<main id="content">
+    <h1>Wähle links eine Kategorie</h1>
+</main>
+
+<script src="menu.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
