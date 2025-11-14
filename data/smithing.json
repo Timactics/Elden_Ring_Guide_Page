@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Schmiedestein-Bergmannsglocke [1]",
+      "title": "Schmiedestein-Klangperle [1]",
       "description": "Drop vom Crystalian (Ringklinge). Schaltet Schmiedestein [1] & [2] frei.",
       "image": "img/smithing_1.jpeg"
     },
     {
-      "title": "Schmiedestein-Bergmannsglocke [2]",
+      "title": "Schmiedestein-Klangperle [2]",
       "description": "Gefunden im Versiegelten Tunnel. Schaltet Schmiedestein [3] & [4] frei.",
       "image": "img/smithing_2.jpeg"
     },
     {
-      "title": "Schmiedestein-Bergmannsglocke [3]",
+      "title": "Schmiedestein-Klangperle [3]",
       "description": "In einer Truhe in den Zamor-Ruinen. Schaltet Schmiedestein [5] & [6] frei.",
       "image": "img/smithing_3.jpeg"
     },
     {
-      "title": "Schmiedestein-Bergmannsglocke [4]",
+      "title": "Schmiedestein-Klangperle [4]",
       "description": "Drop vom Godskin Duo. Schaltet Schmiedestein [7] & [8] frei.",
       "image": "img/smithing_4.jpeg"
     }
