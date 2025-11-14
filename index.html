@@ -8,23 +8,32 @@
 </head>
 <body>
 
-<!-- FRONT PAGE -->
+<!-- FRONT PAGE OVERLAY -->
 <div id="frontpage">
-    <img src="img/eldenring.jpg" id="front-logo" alt="Elden Ring Logo">
-    <button id="enter-btn">Enter The Lands Between</button>
+    <img src="img/eldenring_logo.png" id="front-logo" alt="Elden Ring Logo">
+    <button id="enter-btn">Enter the Lands Between</button>
 </div>
 
-<!-- HEADER -->
-<header id="header">
-    <div class="logo">Elden Ring Guide</div>
-    <button id="menuToggle" class="burger">☰</button>
-</header>
+<!-- SEITEN-INHALT, DER MIT DEM MENÜ MITSCHIEBT -->
+<div id="app">
+    <!-- HEADER -->
+    <header id="header">
+        <div id="headerTitle">Elden Ring Guide</div>
+        <button id="menuToggle" class="burger">☰</button>
+    </header>
 
-<!-- SIDE MENU -->
+    <!-- CONTENT -->
+    <main id="content">
+        <h1>Wähle links eine Kategorie</h1>
+    </main>
+</div>
+
+<!-- SEITLICHES MENÜ -->
 <nav id="sideMenu">
-    <br/>
-    <br/>
+    <h3>Kategorien</h3>
+
     <ul class="menu">
+
         <li class="menu-item">
             <button class="menu-header">Klangperlen – Schmiedesteine</button>
             <ul class="submenu" data-source="data/smithing.json"></ul>
@@ -39,22 +48,18 @@
             <button class="menu-header">Main Bosse (bald verfügbar)</button>
             <ul class="submenu" data-source="data/bosses.json"></ul>
         </li>
+
         <li class="menu-item">
-            <button
-                class="menu-header external-link"
+            <button class="menu-header external-link"
                 data-url="https://mapgenie.io/elden-ring/maps/the-lands-between">
                 Interaktive Karte (Mapgenie)
             </button>
         </li>
+
     </ul>
 </nav>
 
-<!-- CONTENT -->
-<main id="content">
-</main>
-
 <script src="menu.js"></script>
 <script src="app.js"></script>
-
 </body>
 </html>
