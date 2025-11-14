@@ -87,21 +87,27 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
     width: 260px;
+    height: 100vh;
+
     background: rgba(17, 17, 24, 0.96);
     padding: 20px;
+
     border-right: 1px solid #333;
     overflow-y: auto;
-    z-index: 9999;
 
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    z-index: 2000;
+
+    /* vollständig außerhalb des Screens */
+    transform: translateX(-260px);
+    transition: transform 0.35s ease;
 }
 
+/* geöffnetes Menü */
 #sideMenu.open {
     transform: translateX(0);
 }
+
 
 /* MENÜSTRUKTUR */
 .menu-header {
