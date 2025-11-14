@@ -1,12 +1,13 @@
-// BURGER
+// BURGER MENU
 const toggle = document.getElementById("menuToggle");
-const menu = document.getElementById("sideMenu");
+const sideMenu = document.getElementById("sideMenu");
 
-toggle.onclick = () => menu.classList.toggle("open");
+toggle.onclick = () => {
+    sideMenu.classList.toggle("open");
+};
 
-// Unterpunkte öffnen & JSON laden
+// SUBMENÜ LADEN
 document.querySelectorAll(".menu-header").forEach(header => {
-
     header.addEventListener("click", async () => {
 
         const submenu = header.nextElementSibling;
@@ -27,5 +28,4 @@ document.querySelectorAll(".menu-header").forEach(header => {
             submenu.appendChild(li);
         });
     });
-
 });
