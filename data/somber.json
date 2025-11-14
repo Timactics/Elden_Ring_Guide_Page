@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "title": "Somberstone Glocke [1]",
+      "description": "Drop vom Fallingstar Beast. Schaltet Düsterer [1] & [2] frei.",
+      "image": "img/somber1.jpg"
+    },
+    {
+      "title": "Somberstone Glocke [2]",
+      "description": "Drop von Crystalian Spear & Ringklinge. Schaltet Düsterer [3] & [4] frei.",
+      "image": "img/somber2.jpg"
+    },
+    {
+      "title": "Somberstone Glocke [3]",
+      "description": "Auf einer Leiche nördlich der ersten Kirche von Marika. Schaltet Düsterer [5] & [6] frei.",
+      "image": "img/somber3.jpg"
+    },
+    {
+      "title": "Somberstone Glocke [4]",
+      "description": "Leiche beim Sturm-Balkon (Ort der Gnade). Schaltet Düsterer [7] & [8] frei.",
+      "image": "img/somber4.jpg"
+    },
+    {
+      "title": "Somberstone Glocke [5]",
+      "description": "Leiche am Aufzug bei der Großen Brücke. Schaltet Düsterer [9] frei.",
+      "image": "img/somber5.jpg"
+    }
+  ]
+}
