@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0b0b0f;
+    color: #eee;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #13131b;
+    padding: 12px 15px;
+    border-bottom: 1px solid #2d2d38;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e4c37a;
+}
+
+/* BURGER */
+.burger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* SIDEMENU */
+#sideMenu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #111118;
+    padding: 20px;
+    transition: left 0.3s ease;
+    border-right: 1px solid #333;
+    overflow-y: auto;
+}
+
+#sideMenu.open {
+    left: 0;
+}
+
+.menu-header {
+    width: 100%;
+    background: #1b1b26;
+    color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 15px;
+    display: none;
+}
+
+.submenu li {
+    padding: 5px 0;
+    color: #e4c37a;
+    cursor: pointer;
+}
+
+/* CONTENT */
+#content {
+    padding: 20px;
+}
+
+.content-card {
+    background: #161620;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #2d2d38;
+    margin-bottom: 20px;
+}
+
+.content-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+}
