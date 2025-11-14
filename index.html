@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elden Ring – Klangperlen Guide</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="logo">Elden Ring Guide</div>
+<!-- FRONT PAGE -->
+<div id="frontpage">
+    <img src="img/eldenring_logo.png" id="front-logo" alt="Elden Ring Logo">
+    <button id="enter-btn">Enter The Lands Between</button>
+</div>
 
-    <!-- BURGER -->
+<!-- HEADER -->
+<header id="header">
+    <div class="logo">Elden Ring Guide</div>
     <button id="menuToggle" class="burger">☰</button>
 
-    <!-- MENÜ -->
     <nav id="sideMenu">
         <h3>Kategorien</h3>
 
         <ul class="menu">
-
             <li class="menu-item">
                 <button class="menu-header">Klangperlen – Schmiedesteine</button>
                 <ul class="submenu" data-source="data/smithing.json"></ul>
@@ -35,11 +37,11 @@
                 <button class="menu-header">Main Bosse (bald verfügbar)</button>
                 <ul class="submenu" data-source="data/bosses.json"></ul>
             </li>
-
         </ul>
     </nav>
 </header>
 
+<!-- CONTENT -->
 <main id="content">
     <h1>Wähle links eine Kategorie</h1>
 </main>
