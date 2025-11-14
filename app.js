@@ -1,4 +1,6 @@
 const content = document.getElementById("content");
+const frontpage = document.getElementById("frontpage");
+const header = document.getElementById("header");
 
 function loadContent(item) {
     content.innerHTML = `
@@ -9,3 +11,12 @@ function loadContent(item) {
         </div>
     `;
 }
+
+// FRONT PAGE → MAIN GUIDE
+document.getElementById("enter-btn").onclick = () => {
+    frontpage.style.animation = "fadeOut 0.8s forwards";
+    setTimeout(() => {
+        frontpage.style.display = "none";
+        header.style.display = "flex";
+    }, 800);
+};
