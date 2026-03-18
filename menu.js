@@ -45,3 +45,21 @@ document.querySelectorAll(".menu-header").forEach(header => {
         });
     });
 });
+
+// 3D-KARTE
+const map3dBtn = document.getElementById("map3dBtn");
+if (map3dBtn) {
+    map3dBtn.addEventListener("click", () => {
+        document.body.classList.remove("menu-open");
+        const content = document.getElementById("content");
+        if (window.destroyMap) window.destroyMap();
+        content.innerHTML = '<div id="map-canvas-container"></div>';
+        content.classList.add("map-mode");
+        // einen Frame warten, damit das DOM gerendert ist
+        requestAnimationFrame(() => {
+            if (window.initMap) {
+                window.initMap(document.getElementById("map-canvas-container"));
+            }
+        });
+    });
+}
