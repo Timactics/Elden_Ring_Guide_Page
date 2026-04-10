@@ -13,6 +13,10 @@ function loadContent(item, categoryName = null, index = null, list = null) {
     if (index !== null) currentIndex = index;
     if (list !== null) currentList = list;
 
+    // Karte aufräumen falls aktiv
+    if (window.destroyMap) window.destroyMap();
+    content.classList.remove("map-mode");
+
     content.innerHTML = `
         <div class="content-card">
             <h2>${item.title}</h2>
